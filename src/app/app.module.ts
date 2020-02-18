@@ -1,3 +1,4 @@
+import { AuthService } from './auth/services/auth.service';
 import { AuthGuardService } from './auth/services/auth-guard.service';
 import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDashboardComponent } from './dashboard/product-dashboard/product-dashboard.component';
 import { ProfileComponent } from './userprofile/profile/profile.component';
-import { ProductDashboardComponent } from './dashboard/product-dashboard/product-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { ProductDashboardComponent } from './dashboard/product-dashboard/product
     AuthModule
   ],
   providers: [
-    AuthGuardService
+    AuthGuardService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
