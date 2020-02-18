@@ -1,0 +1,47 @@
+#signInUp {
+    width: 50%;
+    min-height: 300px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid red;  
+    margin-top: 15%;
+    background: white;
+    border-radius: 8px;
+    padding-bottom: 20px;
+
+    #formsNavigation {
+        border: 1px solid black;
+        height: 35px;
+        line-height: 35px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        background: rgb(53, 49, 49);
+
+        li {
+            list-style-type: none;
+            display: inline;
+            margin-left: 5px;
+        }
+
+        a {
+            color: rgb(144, 144, 172);
+            text-decoration: none;
+        }
+
+        .activeTab {
+             a {
+                 color: white;
+                 font-weight: 600;
+                 opacity: 0.8;
+                 &:hover {
+                     cursor: pointer;
+                     color: rgb(144, 144, 172);
+                     opacity: 1;
+                     text-decoration: none;
+                 }
+             }
+        }
+
+
+    }
+}
