@@ -47,4 +47,17 @@ export class AuthService {
   public getCurrentUserInfo(): User {
     return this.currentUser;
   }
+
+  public getUserById(id: number): User {
+    let activeUser: User;
+
+    this.users.forEach(
+      (user: User) => {
+        if (user.user.userId == id) {
+          activeUser = user;
+        }
+    });
+
+    return activeUser;
+  }
 }

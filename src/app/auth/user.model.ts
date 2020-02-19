@@ -9,9 +9,7 @@ export interface UserDetails {
 }
 
 export class User {
-    public user: UserDetails;
-
-    constructor(private user: UserDetails) {
+    constructor(public user: UserDetails) {
         this.user = user;
         
         if (!user.userId) {
