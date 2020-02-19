@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ProductDashboardComponent } from './dashboard/product-dashboard/product-dashboard.component';
 import { ProfileComponent } from './userprofile/profile/profile.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
+import { HeaderComponent } from './dashboard/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductDashboardComponent,
     ProfileComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
