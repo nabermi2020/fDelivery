@@ -32,6 +32,8 @@ export class AuthService {
   }
 
   public logOut(): void {
+    this.isAuthenticated = false;
+    console.log(this.isAuthenticated);
     this.authenticatedSubject.next(this.isAuthenticated);
   }
 

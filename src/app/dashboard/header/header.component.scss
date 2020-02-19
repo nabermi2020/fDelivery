@@ -1,6 +1,5 @@
 #headerSection {
     height: 50px;
-    border: 1px solid red;
     width: 100%;
     position: relative;
     background: white(214, 205, 183);
@@ -21,6 +20,15 @@
         position: absolute;
         line-height: 50px;
         right: 0;
+
+        a {
+            &:hover {
+                cursor: pointer;
+                color: rgb(48, 81, 228);
+                text-decoration: underline;
+
+            }
+        }
 
         #cart {
             height: 100%;

@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './authentication.component.html',
   styleUrls: ['./authentication.component.scss']
 })
-export class AuthenticationComponent implements OnInit, OnDestroy {
+export class AuthenticationComponent implements OnInit {
   public authenticationSubscription: Subscription;
 
   constructor(private authService: AuthService,
@@ -21,13 +21,9 @@ export class AuthenticationComponent implements OnInit, OnDestroy {
   public checkAuthenticationStatus(): void {
     this.authenticationSubscription = this.authService.authenticatedSubject.subscribe(
       (isUserAuthentucated: boolean) => {
-        this.router.navigate([isUserAuthentucated? 'dashboard' : ''])
+        console.log(isUserAuthentucated);
+        this.router.navigate([isUserAuthentucated? 'dashboard' : '/'])
       }
     );
   }
-
-  ngOnDestroy() {
-    this.authenticationSubscription.unsubscribe();
-  }
-
 }
