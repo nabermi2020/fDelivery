@@ -21,10 +21,10 @@ export class AuthService {
   public signIn(login: string, password: string): void {
     this.usersCredentials.forEach(
       (credentials: {login: string, password: string}) => {
-        if (credentials.login === login && credentials.password === password) {
+        //if (credentials.login === login && credentials.password === password) {
           this.currentUser = credentials;
           this.isAuthenticated = true;
-        }
+        //}
 
         this.authenticatedSubject.next(this.isAuthenticated);
       }

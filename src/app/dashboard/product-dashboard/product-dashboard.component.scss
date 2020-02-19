@@ -5,4 +5,21 @@
     height: 100%;
     position: fixed;
     background: white;
+
+    #leftSection {
+        width: 15%;
+        position: absolute;
+        background-color: black;
+        height: 100%;
+    }
+
+    #rightSection {
+        width: 85%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        z-index: 5;
+        left: 15%;
+        top: 0;
+    }
 }
