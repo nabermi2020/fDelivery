@@ -19,7 +19,7 @@ export class AuthService {
 
   constructor(private router: Router) {}
 
-  public signIn(login: string, password: string): void {
+  public signIn(login: string, password: string): string {
     login = "john_smith777";
     password = "john777";
     this.users.forEach(
@@ -27,11 +27,11 @@ export class AuthService {
         if (user.user.login === login && user.user.password === password) {
           this.currentUser = user;
           this.isAuthenticated = true;
-        }
-
-        this.authenticatedSubject.next(this.isAuthenticated);
-      }
-    );
+          this.authenticatedSubject.next(this.isAuthenticated);
+          return 'success';
+        } 
+      });
+      return 'error';
   }
 
   public logOut(): void {

@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  public authStatus: string;
 
   constructor(private router: Router,
               private authService: AuthService) { }
@@ -23,6 +24,7 @@ export class SignInComponent implements OnInit {
   public onLogin(form: NgForm): void {
     const login = form.value.login;
     const password = form.value.password;
-    this.authService.signIn(login, password);
+    console.log(form.value);
+    this.authStatus = this.authService.signIn(login, password);
   }
 }
