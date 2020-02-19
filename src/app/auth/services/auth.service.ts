@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { User } from '../user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,23 +9,25 @@ import { Router } from '@angular/router';
 export class AuthService {
   public isAuthenticated: boolean = false;
   public authenticatedSubject = new Subject<boolean>();
-  public currentUser: any;
+  public currentUser: User;
 
-  private usersCredentials: Array<{login: string, password: string }> = [
-    { login: 'test', password: '1233' },
-    { login: 'demo', password: 'demo@1234' },
-    { login: 'admin', password: 'admin@777' },
+  public users: Array<User> = [
+    new User({username: "John Smith", login: "john_smith777", password: "john777", phone: "+380501654784", email: "john777@gmail.com", address: "NY, Green Valley 15/64"}),
+    new User({username: "M.Naberezhnyi", login: "michael777", password: "test123", phone: "+380501865210", email: "mnabe777@gmail.com", address: "LA, Red Valley 7/32"}),
+    new User({username: "John Doe", login: "johnl777", password: "demo1234", phone: "+380502565210", email: "john_doe@gmail.com", address: "Las Vegas, Yellow Road 7/32"})
   ];
 
   constructor(private router: Router) {}
 
   public signIn(login: string, password: string): void {
-    this.usersCredentials.forEach(
-      (credentials: {login: string, password: string}) => {
-        //if (credentials.login === login && credentials.password === password) {
-          this.currentUser = credentials;
+    login = "john_smith777";
+    password = "john777";
+    this.users.forEach(
+      (user: User) => {
+        if (user.user.login === login && user.user.password === password) {
+          this.currentUser = user;
           this.isAuthenticated = true;
-        //}
+        }
 
         this.authenticatedSubject.next(this.isAuthenticated);
       }
@@ -39,5 +42,9 @@ export class AuthService {
 
   public isAuthorized(): boolean {
     return this.isAuthenticated;
+  }
+
+  public getCurrentUserInfo(): User {
+    return this.currentUser;
   }
 }
