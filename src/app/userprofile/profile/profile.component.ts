@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.children[0].params.id;
     this.user = this.authService.getUserById(this.id);
-    console.log(this.user);
   }
 
 }
