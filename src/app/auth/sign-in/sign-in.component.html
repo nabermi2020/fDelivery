@@ -3,33 +3,40 @@
           #f="ngForm"
           (ngSubmit)="onLogin(f)">
 
-    <div class="form-group">
-        <label for="login">
-            Login
+    <div id="credentialsWrapper">
+        <div class="form-group">
+            <label for="login">
+                Login
+            </label>
             <input type="text"
-                   placeholder="Enter login"
-                   class="form-control"
-                   id="login"
-                   name="login"
-                   ngModel>
-        </label>
+                    placeholder="Enter login"
+                    class="form-control"
+                    id="login"
+                    name="login"
+                    ngModel>
+            
+        </div>
+    
+        <div class="form-group">
+            <label for="login">
+                Password
+            </label>
+            <input type="text"
+                    placeholder="Enter password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    ngModel>
+            
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="login">
-            Password
-            <input type="text"
-                   placeholder="Enter password"
-                   class="form-control"
-                   id="password"
-                   name="password"
-                   ngModel>
-        </label>
+    <div class="controls">
+        <button class="btn btn-primary"
+                id="signInBtn"
+                type="submit">
+            Log In  
+        </button>
     </div>
-
-    <button class="btn btn-primary"
-            type="submit">
-        Log In  
-    </button>
     </form>
 </div>

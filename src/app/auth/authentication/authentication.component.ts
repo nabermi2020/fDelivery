@@ -21,7 +21,7 @@ export class AuthenticationComponent implements OnInit, OnDestroy {
   public checkAuthenticationStatus(): void {
     this.authenticationSubscription = this.authService.authenticatedSubject.subscribe(
       (isUserAuthentucated: boolean) => {
-        this.router.navigate([isUserAuthentucated? 'profile' : ''])
+        this.router.navigate([isUserAuthentucated? 'dashboard' : ''])
       }
     );
   }

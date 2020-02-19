@@ -1,95 +1,100 @@
 <div class="col-xs-12 col-md-12">
     <form id="signUp"
           #f="ngForm">
-        <div class="row">
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="username">
-                        Username
-                        <input type="text"
-                                placeholder="Enter username"
-                                class="form-control"
-                                id="username"
-                                name="username"
-                                ngModel>  
-                    </label>
+          <div id="userInfoWrapper">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="username">
+                            Username
+                            <input type="text"
+                                    placeholder="Enter username"
+                                    class="form-control"
+                                    id="username"
+                                    name="username"
+                                    ngModel>  
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="address">
+                            Address
+                            <input type="text"
+                                   placeholder="Enter address"
+                                   class="form-control"
+                                   id="address"
+                                   name="address"
+                                   ngModel>  
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="Password">
+                            Password
+                            <input type="password"
+                                   placeholder="Enter password"
+                                   class="form-control"
+                                   id="password"
+                                   name="password"
+                                   ngModel>  
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone
+                            <input type="phone"
+                                   placeholder="Enter phone"
+                                   class="form-control"
+                                   id="phone"
+                                   name="phone"
+                                   ngModel>  
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="email">
+                            Email
+                            <input type="email"
+                                   placeholder="Enter email"
+                                   class="form-control"
+                                   id="email"
+                                   name="email"
+                                   ngModel>  
+                        </label>
+                    </div>
+            </div>
+    
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="passwordRepeat">
+                            Repeat Password
+                            <input type="passwordRepeat"
+                                   placeholder="Repeat password"
+                                   class="form-control"
+                                   id="passwordRepeat"
+                                   name="passwordRepeat"
+                                   ngModel>  
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="controls">
+                    <button class="btn btn-success"
+                            type="submit"
+                            id="signUpBtn">
+                        Sign Up
+                    </button>
                 </div>
             </div>
-
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="address">
-                        Address
-                        <input type="text"
-                               placeholder="Enter address"
-                               class="form-control"
-                               id="address"
-                               name="address"
-                               ngModel>  
-                    </label>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="Password">
-                        Password
-                        <input type="password"
-                               placeholder="Enter password"
-                               class="form-control"
-                               id="password"
-                               name="password"
-                               ngModel>  
-                    </label>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="phone">
-                        Phone
-                        <input type="phone"
-                               placeholder="Enter phone"
-                               class="form-control"
-                               id="phone"
-                               name="phone"
-                               ngModel>  
-                    </label>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="email">
-                        Email
-                        <input type="email"
-                               placeholder="Enter email"
-                               class="form-control"
-                               id="email"
-                               name="email"
-                               ngModel>  
-                    </label>
-                </div>
-        </div>
-
-            <div class="col-md-6 col-xs-6">
-                <div class="form-group">
-                    <label for="passwordRepeat">
-                        Repeat Password
-                        <input type="passwordRepeat"
-                               placeholder="Repeat password"
-                               class="form-control"
-                               id="passwordRepeat"
-                               name="passwordRepeat"
-                               ngModel>  
-                    </label>
-                </div>
-            </div>
-
-            <button class="btn btn-success"
-                    type="submit">
-                Sign Up
-            </button>
-        </div>
+          </div>
     </form>
 </div>

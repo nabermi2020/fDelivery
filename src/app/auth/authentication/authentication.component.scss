@@ -1,13 +1,12 @@
 #signInUp {
     width: 50%;
-    min-height: 300px;
     height: auto;
     margin: 0 auto;
-    border: 1px solid red;  
-    margin-top: 15%;
+    margin-top: 20%;
     background: white;
     border-radius: 8px;
     padding-bottom: 20px;
+    box-shadow: 5px 5px 10px black;
 
     #formsNavigation {
         border: 1px solid black;
@@ -16,6 +15,9 @@
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
         background: rgb(53, 49, 49);
+        text-align: center;
+        color: white;
+        padding-left: 0px;
 
         li {
             list-style-type: none;
