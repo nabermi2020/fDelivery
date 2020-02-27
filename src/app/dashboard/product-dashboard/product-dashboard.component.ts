@@ -8,14 +8,11 @@ import { ProductService } from 'src/app/shared/services/product.service';
   styleUrls: ['./product-dashboard.component.scss']
 })
 export class ProductDashboardComponent implements OnInit {
-  public products: Array<any>;
 
-  constructor(private authService: AuthService,
-              private productService: ProductService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
-    console.log(this.products);
+  
   }
 
 }

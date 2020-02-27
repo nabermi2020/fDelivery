@@ -12,7 +12,7 @@ export class ProductService {
       productDescription:
         "Шинка, моцарела, помідори, кукурудза, соус часниковий",
       productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../pizza1.jpg"
+      productImgSrc: "./../../assets/pizza1.jpg"
     },
     {
       id: 2,

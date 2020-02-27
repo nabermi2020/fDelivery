@@ -22,6 +22,7 @@ export class AuthService {
   public signIn(login: string, password: string): string {
     login = "john_smith777";
     password = "john777";
+    
     this.users.forEach(
       (user: User) => {
         if (user.user.login === login && user.user.password === password) {
