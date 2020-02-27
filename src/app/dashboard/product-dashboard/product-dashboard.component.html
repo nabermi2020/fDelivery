@@ -8,7 +8,9 @@
       <div id="rightSection">
         <app-header></app-header>
         <div id="products-grid">
-
+          <div *ngFor="let product of products">
+            <!--{{ product.productTitle }}-->
+          </div>
         </div>
         <router-outlet></router-outlet>
       </div>
