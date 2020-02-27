@@ -5,12 +5,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { ProfileModule } from '../userprofile/profile.module';
+import { ProductGridComponent } from './product-grid/product-grid.component';
 
 @NgModule({
     declarations: [
         ProductDashboardComponent, 
         SidebarComponent,
-        HeaderComponent
+        HeaderComponent,
+        ProductGridComponent
     ],
     imports: [
         CommonModule,
