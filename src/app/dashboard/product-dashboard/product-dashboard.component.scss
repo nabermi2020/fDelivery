@@ -1,26 +1,22 @@
-#content {
-    margin-right: 0;
-    margin-left: -31px;
-    width: 100%;   
-    height: 100%;
-    position: fixed;
-    background: white;
+#dashboard {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 
-    #leftSection {
-        width: 15%;
-        position: absolute;
-        background-color: black;
-        height: 100%;
-    }
+  #leftSection {
+    width: 15%;
+    background-color: black;
+    min-height: 100vh;
+  }
 
-    #rightSection {
-        width: 85%;
-        height: auto;
-        background-color: white;
-        position: absolute;
-        z-index: 5;
-        left: 15%;
-        top: 0;
-         
-    }
+  #rightSection {
+    width: 85%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 5;
+  }
 }

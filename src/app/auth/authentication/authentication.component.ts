@@ -22,7 +22,7 @@ export class AuthenticationComponent implements OnInit {
     this.authenticationSubscription = this.authService.authenticatedSubject.subscribe(
       (isUserAuthentucated: boolean) => {
         console.log(isUserAuthentucated);
-        this.router.navigate([isUserAuthentucated? 'dashboard' : '/'])
+        this.router.navigate([isUserAuthentucated? 'dashboard/products' : '/'])
       }
     );
   }

@@ -1,41 +1,40 @@
 #products-grid {
-    padding-left: 7px;
-    padding-bottom: 20px;
-}
+  padding-bottom: 20px;
+  padding-left: 15px;
+  border: 1px solid red;
 
-.product {
+  .product {
     width: 90%;
-    height: 370px; 
+    height: 370px;
     border: 1px solid red;
     overflow: hidden;
     text-align: center;
     margin-top: 20px;
     position: relative;
-}
+  }
 
-.product:hover .imgWrapper {
+  .product:hover .imgWrapper {
     cursor: pointer;
     opacity: 0.85;
-}
+  }
 
-.imgWrapper img {
+  .imgWrapper img {
     width: 100%;
     height: 270px;
     overflow: hidden;
-    
-}
- 
-.product >.productDescription {
+  }
+
+  .product > .productDescription {
     background: black;
     width: 100%;
     height: 30%;
     position: absolute;
     color: white;
-}
+  }
 
-.addToCartWrapper {
+  .addToCartWrapper {
     background: rgb(247, 65, 104);
-    visibility: hidden;  
+    visibility: hidden;
     text-align: center;
     position: absolute;
     height: 15%;
@@ -43,62 +42,62 @@
     bottom: 0;
     width: 100%;
     transition: opacity 2s ease-in 1s;
-}
+  }
 
-.product:hover .addToCartWrapper {
+  .product:hover .addToCartWrapper {
     visibility: visible;
     cursor: pointer;
-}
+  }
 
-.productQuantity {
+  .productQuantity {
     border: 1px solid red;
     width: 25%;
     position: relative;
     height: 100%;
     float: left;
     color: white;
-}
+  }
 
-.addToCart {
+  .addToCart {
     border: 1px solid red;
     float: left;
     width: 50%;
     height: 100%;
     color: white;
-}
+  }
 
-.productPrice {
+  .productPrice {
     border: 1px solid red;
     float: left;
     width: 25%;
     height: 100%;
     color: white;
-}
+  }
 
-.productInfoAndPrice {
+  .productInfoAndPrice {
     border: 1px solid red;
     width: 100%;
     height: 25px;
     line-height: 25px;
     position: relative;
-}
+  }
 
-.productWeight {
+  .productWeight {
     position: absolute;
     padding-left: 1.5%;
     width: 50%;
-}
+  }
 
-.prPrice {
+  .prPrice {
     position: absolute;
     right: 0;
     padding-right: 1.5%;
     width: 50%;
-    
-    text-align: end;
-}
 
-.productTitle {
+    text-align: end;
+  }
+
+  .productTitle {
     width: 100%;
     text-align: left;
     position: relative;
@@ -106,9 +105,9 @@
     width: 90%;
     height: 30px;
     border: 1px solid red;
-}
+  }
 
-.ingredients {
+  .ingredients {
     position: relative;
     left: 10%;
     width: 90%;
@@ -118,4 +117,5 @@
     font-size: 11px;
     text-align: start;
     word-wrap: break-word;
+  }
 }
