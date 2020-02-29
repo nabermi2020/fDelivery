@@ -4,19 +4,19 @@
          *ngFor="let product of products">
       <div class="product">
         <div class="imgWrapper">
-          <img [src]="product.productImgSrc"/>
+          <img [src]="product.product.imgPath"/>
         </div>
 
         <div class="productDescription">
           <div class="productInfoAndPrice">
-            <div class="productWeight">{{ product.productWeightAndSize }}</div>
-            <div class="prPrice">{{ product.productPrice }} грн</div>
+            <div class="productWeight">{{ product.product.productWeight }} {{ product.product.productSize }}</div>
+            <div class="prPrice">{{ product.product.productPrice }} грн</div>
           </div>
 
           <div class="productTitle">
-            <h4>{{ product.productTitle }}</h4>
+            <h4>{{ product.product.productTitle }}</h4>
           </div>
-          <div class="ingredients">{{ product.productDescription }}</div>
+          <div class="ingredients">{{ product.product.productDescription }}</div>
         </div>
 
         <div class="addToCartWrapper">

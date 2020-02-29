@@ -1,73 +1,18 @@
 import { Injectable } from "@angular/core";
+import { Product } from '../models/products.model';
 
 @Injectable({
   providedIn: "root"
 })
 export class ProductService {
-  private products: Array<any> = [
-    {
-      id: 1,
-      productTitle: "Піца Емілія",
-      productPrice: "175",
-      productDescription:
-        "Шинка, моцарела, помідори, кукурудза, соус часниковий",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza1.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza2.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza3.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza3.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza4.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza5.jpg"
-    },
-    {
-      id: 2,
-      productTitle: "Чотири Сири Класична",
-      productPrice: "199",
-      productDescription:
-        " Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
-      productWeightAndSize: "550 грам, 30см",
-      productImgSrc: "./../../assets/pizza6.jpg"
-    }
+  private products: Array<Product> = [
+    new Product({ productTitle: 'Піца Емілія', productWeight: '550 g', productSize: '30 cm', productDescription: 'Шинка, моцарела, помідори, кукурудза, соус часниковий', imgPath: './../../assets/pizza1.jpg', productPrice: '175'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza2.jpg', productPrice: '199'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza3.jpg', productPrice: '199'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza4.jpg', productPrice: '199'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza5.jpg', productPrice: '199'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza6.jpg', productPrice: '199'}),
+    new Product({ productTitle: 'Чотири Сири Класична', productWeight: '550 g', productSize: '30 cm', productDescription: 'Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі', imgPath: './../../assets/pizza6.jpg', productPrice: '199'}),
   ];
 
   constructor() {}

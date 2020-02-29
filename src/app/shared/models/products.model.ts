@@ -1,9 +1,9 @@
 export interface ProductDetails {
-    imgPath: string;
+    productTitle: string;
     productWeight: string;
     productSize: string;
     productDescription: string;
-    productTitle: string;
+    imgPath: string;
     productPrice: string;
     productId?: number;
 }
