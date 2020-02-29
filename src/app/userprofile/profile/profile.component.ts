@@ -16,6 +16,10 @@ export class ProfileComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.fetchUserInfo();
+  }
+
+  private fetchUserInfo(): void {
     this.id = this.route.snapshot.children[0].params.id;
     this.user = this.authService.getUserById(this.id);
   }

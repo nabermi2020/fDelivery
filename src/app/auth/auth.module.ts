@@ -2,7 +2,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NgModule } from '@angular/core';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthenticationComponent } from './authentication/authentication.component';
 
@@ -15,7 +15,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     imports: [
         CommonModule,
         FormsModule,
-        AuthRoutingModule
+        AuthRoutingModule,
+        ReactiveFormsModule
     ],
     exports: [
         FormsModule
