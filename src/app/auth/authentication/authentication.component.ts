@@ -25,5 +25,15 @@ export class AuthenticationComponent implements OnInit {
         this.router.navigate([isUserAuthentucated? 'dashboard/products' : '/'])
       }
     );
+
+    this.isAuthenticated();
+  }
+
+  private isAuthenticated(): void {
+    const userCredentials = localStorage.getItem('userCredentials');
+    if (userCredentials) {
+      const credentials = JSON.parse(userCredentials);
+      this.authService.signIn(credentials.login, credentials.password);
+    }
   }
 }
