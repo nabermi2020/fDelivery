@@ -9,13 +9,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
-  public authStatus: string;
+  public authStatus: boolean = true;
 
   constructor(private router: Router,
               private authService: AuthService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public navToDashboard(): void {
     this.router.navigate(['dashboard']);
@@ -24,7 +23,10 @@ export class SignInComponent implements OnInit {
   public onLogin(form: NgForm): void {
     const login = form.value.login;
     const password = form.value.password;
-    console.log(form.value);
+
     this.authStatus = this.authService.signIn(login, password);
+    if (this.authService.isAuthenticated) {
+      localStorage.setItem('userCredentials', JSON.stringify({login: login, password: password}));
+    }
   }
 }

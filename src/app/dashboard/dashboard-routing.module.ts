@@ -12,7 +12,9 @@ const dashboardRoutes: Routes = [
             { path: ':id', component: ProfileDetailComponent }
         ]},
 
-        { path: 'products', component: ProductGridComponent }
+        { path: 'products', component: ProductGridComponent, children: [
+            { path: ':category', component: ProductGridComponent }
+        ] }
     ]},
       
 ];

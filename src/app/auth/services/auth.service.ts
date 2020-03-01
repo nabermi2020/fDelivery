@@ -19,25 +19,26 @@ export class AuthService {
 
   constructor(private router: Router) {}
 
-  public signIn(login: string, password: string): string {
+  public signIn(login: string, password: string): boolean {
     login = "john_smith777";
     password = "john777";
     
     this.users.forEach(
       (user: User) => {
-        if (user.user.login === login && user.user.password === password) {
+        if (user.user.login === login &&
+            user.user.password === password) {
           this.currentUser = user;
           this.isAuthenticated = true;
           this.authenticatedSubject.next(this.isAuthenticated);
-          return 'success';
+          return true;
         } 
       });
-      return 'error';
+      return false;
   }
 
   public logOut(): void {
     this.isAuthenticated = false;
-    console.log(this.isAuthenticated);
+    localStorage.removeItem('userCredentials');
     this.authenticatedSubject.next(this.isAuthenticated);
   }
 
@@ -60,5 +61,10 @@ export class AuthService {
     });
 
     return activeUser;
+  }
+
+  public addUser(user: User): void {
+    this.users.push(user);
+    console.log(this.users);
   }
 }

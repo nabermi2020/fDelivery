@@ -7,7 +7,8 @@ import { ProductService } from 'src/app/shared/services/product.service';
   styleUrls: ['./product-grid.component.scss']
 })
 export class ProductGridComponent implements OnInit {
-  public products: Array<any>;
+  public products: Object;
+  public activeCategory: string = 'pizza';
 
   constructor(private productService: ProductService) { }
 

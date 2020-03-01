@@ -37,7 +37,7 @@
             
         </div>
         <p *ngIf="!password.valid && password.touched" class="validationError">Password is not valid!</p>
-        <p *ngIf="authStatus == 'error'" class="validationError">Your login and password are incorect!</p>
+        <p *ngIf="!authStatus && password.touched" class="validationError">Your login and password are incorect!</p>
     </div>
 
     <div class="controls">
