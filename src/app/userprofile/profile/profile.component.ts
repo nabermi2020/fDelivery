@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { User } from 'src/app/auth/user.model';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, OnDestroy {
+  private userIdSubscription: Subscription;
   public id: number;
   public user: User;
   objectKeys = Object.keys;
@@ -28,6 +30,7 @@ export class ProfileComponent implements OnInit {
     this.fetchUserInfo();
     this.mapUserData();
     console.log(this.userViewTemplate);
+    this.fetchUserId();
   }
 
   private fetchUserInfo(): void {
@@ -42,6 +45,19 @@ export class ProfileComponent implements OnInit {
     this.userViewTemplate['Phone'] = this.user.user.phone;
     this.userViewTemplate['Email'] = this.user.user.email;
     this.userViewTemplate['Address'] = this.user.user.address;
+  }
+
+  private fetchUserId(): void {
+    this.userIdSubscription = this.route.firstChild.params
+      .subscribe(
+        (params: Params) => {
+          this.id = params.id;
+        }
+      );
+  }
+
+  ngOnDestroy() {
+    this.userIdSubscription.unsubscribe();
   }
 
 }
