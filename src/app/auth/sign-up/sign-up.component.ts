@@ -32,7 +32,13 @@ export class SignUpComponent implements OnInit {
   
   public onSignUp(): void {
     const newUser = new User(this.registrationForm.value);
-    this.authService.addUser(newUser);
+    if (this.registrationForm.valid) {
+      this.authService.signUp(newUser);
+    }
+  }
+
+  get formField() {
+    return this.registrationForm;
   }
 
 }

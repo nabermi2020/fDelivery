@@ -17,6 +17,9 @@
                                     formControlName="firstName">  
                         </label>
                     </div>
+                    
+                    <p *ngIf="!formField.get('firstName').valid && formField.get('firstName').touched" class="validationError">First name is not valid!</p>
+                    <p *ngIf="formField.get('firstName').errors && formField.get('firstName').touched" class="validationError">Minimal length should be at least 4!</p>
                 </div>
 
                 <div class="col-md-6 col-xs-6">
@@ -31,6 +34,9 @@
                                     formControlName="lastName">  
                         </label>
                     </div>
+                    
+                    <p *ngIf="!formField.get('lastName').valid && formField.get('lastName').touched" class="validationError">Last name is not valid!</p>
+                    <p *ngIf="formField.get('lastName').errors && formField.get('lastName').touched" class="validationError">Minimal length should be at least 4!</p>
                 </div>
     
               
@@ -74,6 +80,9 @@
                                     formControlName="login">  
                         </label>
                     </div>
+                    
+                    <p *ngIf="!formField.get('login').valid && formField.get('login').touched" class="validationError">Login isn't valid!</p>
+                    <p *ngIf="formField.get('login').errors && formField.get('login').touched" class="validationError">Minimal length should be at least 5!</p>
                 </div>
     
                 <div class="col-md-6 col-xs-6">

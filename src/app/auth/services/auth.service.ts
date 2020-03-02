@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from '../user.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from './../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,7 @@ export class AuthService {
   public isAuthenticated = false;
   public authenticatedSubject = new Subject<boolean>();
   public currentUser: User;
+  private apiUrl = environment.apiUrl;
 
   public users: Array<User> = [
     new User({firstName: 'John', lastName: 'Smith', login: 'john_smith777', password: 'john777', phone: '+380501654784', email: 'john777@gmail.com', address: 'NY, Green Valley 15/64'}),
@@ -17,7 +20,8 @@ export class AuthService {
     new User({firstName: 'John', lastName: 'Doe', login: 'johnl777', password: 'demo1234', phone: '+380502565210', email: 'john_doe@gmail.com', address: 'Las Vegas, Yellow Road 7/32'})
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+              private http: HttpClient) {}
 
   public signIn(login: string, password: string): boolean {
     login = 'john_smith777';
@@ -35,6 +39,19 @@ export class AuthService {
       });
 
     return false;
+  }
+
+  public signUp(user: User): void {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    this.http.post(`${this.apiUrl}/users`, user.user, { headers })
+      .subscribe(
+        (success: Response) => {
+          this.router.navigate(['']);
+        },
+        (error: Response) => {
+          console.log(error);
+        }
+      )
   }
 
   public logOut(): void {

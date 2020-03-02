@@ -1,13 +1,19 @@
 #userInfoWrapper {
   margin: 0 auto;
   width: 85%;
-}
 
-.controls {
-  margin: 0 auto;
+  .validationError {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-  #signUpBtn {
-    width: 100px;
-    height: 40px;
+  .controls {
+    margin: 0 auto;
+
+    #signUpBtn {
+      width: 100px;
+      height: 40px;
+    }
   }
 }
