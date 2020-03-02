@@ -2,64 +2,64 @@
   "pizza": [
     {
       "id": 1,
-      "productTitle": "Піца Емілія",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Emilia's Pizza",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza1.jpg",
       "productPrice": "199"
     },
     {
       "id": 2,
-      "productTitle": "Чотири Сири Класична",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Carbonara",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza2.jpg",
       "productPrice": "199"
     },
     {
       "id": 3,
-      "productTitle": "Піца Емілія",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza3.jpg",
       "productPrice": "199"
     },
     {
       "id": 4,
-      "productTitle": "Чотири Сири Класична",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Super Meat",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza4.jpg",
       "productPrice": "199"
     },
     {
       "id": 5,
-      "productTitle": "Піца Емілія",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Cesare",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza5.jpg",
       "productPrice": "199"
     },
     {
       "id": 6,
-      "productTitle": "Чотири Сири Класична",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "Hot Chili",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza6.jpg",
       "productPrice": "199"
     },
     {
       "id": 7,
-      "productTitle": "Піца Емілія",
-      "productWeight": "550 грам",
-      "productSize": "30 cm",
-      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "productTitle": "With Prosciutto",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza7.jpg",
       "productPrice": "199"
     }
@@ -67,7 +67,7 @@
   "salads": [
     {
       "id": 8,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Cesar with Chicken",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -76,7 +76,7 @@
     },
     {
       "id": 9,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "With Prosciutto",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -85,7 +85,7 @@
     },
     {
       "id": 10,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Vegetable Plateau",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -94,7 +94,7 @@
     },
     {
       "id": 11,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Cheese Plateau",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -105,7 +105,7 @@
   "drinks": [
     {
       "id": 12,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Schweppes Pink Grapefruit",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -114,7 +114,7 @@
     },
     {
       "id": 13,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Doctor Pepper Cherry",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -123,7 +123,7 @@
     },
     {
       "id": 14,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Doctor Pepper Orange",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
@@ -132,7 +132,7 @@
     },
     {
       "id": 15,
-      "productTitle": "Four Cheeses Classic",
+      "productTitle": "Schweppes Pink",
       "productWeight": "550 grams",
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
