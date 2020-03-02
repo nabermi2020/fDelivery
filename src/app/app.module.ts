@@ -5,9 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './userprofile/profile/profile.component';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { ProductService } from './shared/services/product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { ProductService } from './shared/services/product.service';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    DashboardModule
+    HttpClientModule
   ],
   providers: [
     AuthGuardService,

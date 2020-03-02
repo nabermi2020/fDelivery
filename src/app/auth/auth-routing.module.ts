@@ -9,8 +9,8 @@ const authRoutes = [
         { path: 'sign-in', component: SignInComponent },
         { path: 'sign-up', component: SignUpComponent },
     ]},
-    { path: '', redirectTo: 'authentication/sign-in', pathMatch: 'full' }  
-]
+    { path: '', redirectTo: 'authentication/sign-in', pathMatch: 'full' }
+];
 
 @NgModule({
     imports: [

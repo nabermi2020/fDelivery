@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { User } from './../user.model';
 
@@ -19,14 +19,14 @@ export class SignUpComponent implements OnInit {
 
   private initForm(): void {
     this.registrationForm = new FormGroup({
-      'firstName': new FormControl(),
-      'lastName': new FormControl(),
-      'login': new FormControl(),
-      'password': new FormControl(),
-      'repeatPassword': new FormControl(),
-      'phone': new FormControl(),
-      'email': new FormControl(),
-      'address': new FormControl()
+      'firstName': new FormControl('', [Validators.required, Validators.minLength(4)]),
+      'lastName': new FormControl('', [Validators.required, Validators.minLength(4)]),
+      'login': new FormControl('', [Validators.required, Validators.minLength(5)]),
+      'password': new FormControl('', [Validators.required]),
+      'repeatPassword': new FormControl('', [Validators.required]),
+      'phone': new FormControl(''),
+      'email': new FormControl('', [Validators.required, Validators.email]),
+      'address': new FormControl('')
     });
   }
   

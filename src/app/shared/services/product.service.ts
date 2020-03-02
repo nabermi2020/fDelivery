@@ -1,10 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Product } from '../models/products.model';
+import { environment } from './../../../environments/environment';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, Observer } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
 })
 export class ProductService {
+  private apiUrl = environment.apiUrl;
+
   private products = {
     pizza: [
       new Product({ productTitle: 'Піца Емілія', productWeight: '550 g', productSize: '30 cm', productDescription: 'Шинка, моцарела, помідори, кукурудза, соус часниковий', imgPath: './../../assets/pizza1.jpg', productPrice: '175'}),
@@ -17,9 +22,20 @@ export class ProductService {
     ]
   };
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  public getProducts() {
-    return this.products;
+  public saveProducts() {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    this.http.post<Array<Product>>(`${this.apiUrl}`, this.products, { headers });
+  }
+
+  public getProducts(): Observable<Array<Product>> {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    return this.http.get<Array<Product>>(`${this.apiUrl}/pizza`, { headers });
+  }
+
+  public getProductsByCategory(category: string): Observable<Array<Product>> {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    return this.http.get<Array<Product>>(`${this.apiUrl}/${category}`, { headers });
   }
 }

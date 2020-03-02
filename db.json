@@ -1,0 +1,67 @@
+{
+  "pizza": [
+    {
+      "id": 1,
+      "productTitle": "Піца Емілія",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza1.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 2,
+      "productTitle": "Чотири Сири Класична",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza2.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 3,
+      "productTitle": "Піца Емілія",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza3.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 4,
+      "productTitle": "Чотири Сири Класична",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza4.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 5,
+      "productTitle": "Піца Емілія",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza5.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 6,
+      "productTitle": "Чотири Сири Класична",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza6.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 7,
+      "productTitle": "Піца Емілія",
+      "productWeight": "550 грам",
+      "productSize": "30 cm",
+      "productDescription": "Моцарела, пармезан, сир чедер, сир дорблю, соус вершковий, білий сир Брі",
+      "imgPath": "./../../assets/pizza7.jpg",
+      "productPrice": "199"
+    }
+  ]
+}

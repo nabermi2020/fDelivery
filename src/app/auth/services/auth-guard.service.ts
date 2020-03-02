@@ -6,15 +6,15 @@ import { CanActivate, Router, ActivatedRoute, ActivatedRouteSnapshot, RouterStat
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
-  public isAuthorized: boolean = false;
+  public isAuthorized = false;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
               private authService: AuthService) {}
-  
+
   public canActivate(route: ActivatedRouteSnapshot,
                      state: RouterStateSnapshot): boolean {
-    if (this.authService.isAuthorized() 
+    if (this.authService.isAuthorized()
         && localStorage.getItem('userCredentials')) {
       return true;
     } else {

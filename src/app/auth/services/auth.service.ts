@@ -7,22 +7,22 @@ import { User } from '../user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  public isAuthenticated: boolean = false;
+  public isAuthenticated = false;
   public authenticatedSubject = new Subject<boolean>();
   public currentUser: User;
 
   public users: Array<User> = [
-    new User({firstName: "John", lastName: "Smith", login: "john_smith777", password: "john777", phone: "+380501654784", email: "john777@gmail.com", address: "NY, Green Valley 15/64"}),
-    new User({firstName: "Michael", lastName: "Naberezhnyi", login: "michael777", password: "test123", phone: "+380501865210", email: "mnabe777@gmail.com", address: "LA, Red Valley 7/32"}),
-    new User({firstName: "John", lastName: "Doe", login: "johnl777", password: "demo1234", phone: "+380502565210", email: "john_doe@gmail.com", address: "Las Vegas, Yellow Road 7/32"})
+    new User({firstName: 'John', lastName: 'Smith', login: 'john_smith777', password: 'john777', phone: '+380501654784', email: 'john777@gmail.com', address: 'NY, Green Valley 15/64'}),
+    new User({firstName: 'Michael', lastName: 'Naberezhnyi', login: 'michael777', password: 'test123', phone: '+380501865210', email: 'mnabe777@gmail.com', address: 'LA, Red Valley 7/32'}),
+    new User({firstName: 'John', lastName: 'Doe', login: 'johnl777', password: 'demo1234', phone: '+380502565210', email: 'john_doe@gmail.com', address: 'Las Vegas, Yellow Road 7/32'})
   ];
 
   constructor(private router: Router) {}
 
   public signIn(login: string, password: string): boolean {
-    login = "john_smith777";
-    password = "john777";
-    
+    login = 'john_smith777';
+    password = 'john777';
+
     this.users.forEach(
       (user: User) => {
         if (user.user.login === login &&
@@ -31,9 +31,10 @@ export class AuthService {
           this.isAuthenticated = true;
           this.authenticatedSubject.next(this.isAuthenticated);
           return true;
-        } 
+        }
       });
-      return false;
+
+    return false;
   }
 
   public logOut(): void {

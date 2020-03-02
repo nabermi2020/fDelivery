@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
-  public authStatus: boolean = true;
+  public authStatus = true;
 
   constructor(private router: Router,
               private authService: AuthService) { }
@@ -26,7 +26,7 @@ export class SignInComponent implements OnInit {
 
     this.authStatus = this.authService.signIn(login, password);
     if (this.authService.isAuthenticated) {
-      localStorage.setItem('userCredentials', JSON.stringify({login: login, password: password}));
+      localStorage.setItem('userCredentials', JSON.stringify({login, password}));
     }
   }
 }

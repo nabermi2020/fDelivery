@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/services/product.service';
+import { Observable } from 'rxjs';
+import { Product } from 'src/app/shared/models/products.model';
 
 @Component({
   selector: 'app-product-grid',
@@ -7,7 +9,7 @@ import { ProductService } from 'src/app/shared/services/product.service';
   styleUrls: ['./product-grid.component.scss']
 })
 export class ProductGridComponent implements OnInit {
-  public products: Object;
+  public products$: Observable<Array<Product>>; 
   public activeCategory: string = 'pizza';
 
   constructor(private productService: ProductService) { }
@@ -17,8 +19,9 @@ export class ProductGridComponent implements OnInit {
   }
 
   private fetchProducts(): void {
-    this.products = this.productService.getProducts();
-    console.log(this.products);
+    this.products$ = this.productService.getProducts();
+   
+    //console.log(this.products);
   }
 
 }

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { ProfileModule } from '../userprofile/profile.module';
 import { ProductGridComponent } from './product-grid/product-grid.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,10 +18,10 @@ import { ProductGridComponent } from './product-grid/product-grid.component';
     imports: [
         CommonModule,
         DashboardRoutingModule,
-        ProfileModule
+        ProfileModule,
+        FormsModule
     ],
     exports: [
-
     ]
 })
 export class DashboardModule {}
