@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductService } from './shared/services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EditModalService } from './shared/services/edit-modal.service';
+import { ProductCartService } from './shared/services/product-cart.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     AuthGuardService,
     AuthService,
-    ProductService
+    ProductService,
+    EditModalService,
+    ProductCartService
   ],
   bootstrap: [AppComponent]
 })

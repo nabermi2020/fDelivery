@@ -1,12 +1,14 @@
- 
-    <div id="dashboard">
-      <div id="leftSection">
-        <app-sidebar></app-sidebar>
-      </div>
+<div id="dashboard">
+  <ng-container *ngIf="isModalEnabled">
+    <div id="edit-modal-shadow"></div>
+  </ng-container>
 
-      <div id="rightSection">
-        <app-header></app-header>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
- 
+  <div id="leftSection">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div id="rightSection">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>

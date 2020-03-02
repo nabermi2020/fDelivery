@@ -5,6 +5,14 @@
   overflow-x: hidden;
   position: relative;
 
+  #edit-modal-shadow {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: rgba(94, 84, 84, 0.596);
+    height: 100%;
+  }
+
   #leftSection {
     width: 15%;
     background-color: black;
@@ -17,6 +25,5 @@
     min-height: 100vh;
     margin: 0 auto;
     background-color: white;
-    z-index: 5;
   }
 }
