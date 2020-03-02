@@ -63,5 +63,81 @@
       "imgPath": "./../../assets/pizza7.jpg",
       "productPrice": "199"
     }
+  ],
+  "salads": [
+    {
+      "id": 8,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/salad1.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 9,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/salad2.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 10,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/salad3.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 11,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/salad4.jpg",
+      "productPrice": "199"
+    }
+  ],
+  "drinks": [
+    {
+      "id": 12,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/drink1.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 13,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/drink2.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 14,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/drink3.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 15,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/drink4.jpg",
+      "productPrice": "199"
+    }
   ]
 }

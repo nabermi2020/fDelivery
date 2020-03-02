@@ -21,7 +21,7 @@ export class AuthenticationComponent implements OnInit {
   public checkAuthenticationStatus(): void {
     this.authenticationSubscription = this.authService.authenticatedSubject.subscribe(
       (isUserAuthentucated: boolean) => {
-        this.router.navigate([isUserAuthentucated ? 'dashboard/products' : '/']);
+        this.router.navigate([isUserAuthentucated ? 'dashboard/products/pizza' : '/']);
       }
     );
 
