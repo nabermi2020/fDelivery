@@ -16,7 +16,7 @@ const dashboardRoutes: Routes = [
             { path: ':category', component: ProductGridComponent }
         ] }
     ]},
-      
+
 ];
 
 @NgModule({
