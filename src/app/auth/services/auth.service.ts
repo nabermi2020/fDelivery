@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { User } from '../user.model';
+import { User, UserDetails } from '../user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../../environments/environment';
 
@@ -83,6 +83,15 @@ export class AuthService {
 
   public addUser(user: User): void {
     this.users.push(user);
-    console.log(this.users);
+  }
+
+  public checkUser(login: string): Observable<Array<UserDetails>> {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    return this.http.get<Array<UserDetails>>(`${this.apiUrl}/users?login=${login}`, { headers });
+  }
+
+  public checkEmail(email: string): Observable<Array<UserDetails>>{
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    return this.http.get<Array<UserDetails>>(`${this.apiUrl}/users?email=${email}`, { headers });
   }
 }

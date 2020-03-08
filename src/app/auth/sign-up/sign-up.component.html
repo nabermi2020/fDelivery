@@ -40,34 +40,46 @@
                 </div>
     
               
-                <div class="col-md-6 col-xs-6">
-                    <div class="form-group">
-                        <label for="Password">
-                            Password
-                            <input type="password"
-                                   placeholder="Enter password"
-                                   class="form-control"
-                                   id="password"
-                                   name="password"
-                                   formControlName="password">  
-                        </label>
+                <div formGroupName=passwords class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="Password">
+                                    Password
+                                    <input type="password"
+                                           placeholder="Enter password"
+                                           class="form-control"
+                                           id="password"
+                                           name="password"
+                                           formControlName="password">  
+                                </label>
+                            </div>
+
+                           <p *ngIf="formField.get('passwords.password').errors && formField.get('passwords.password').touched" class="validationError">Password isn't valid!</p>
+                           <p *ngIf="formField.get('passwords.password')?.errors?.minlength && formField.get('passwords.password').touched" class="validationError">Min length should be 4!</p>
+                           <p *ngIf="formField.get('passwords')?.errors?.doesMatchPassword && formField.get('passwords').touched" class="validationError">Passwords don't match!</p> 
+                        </div>
+        
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="passwordRepeat">
+                                    Repeat Password
+                                    <input type="password"
+                                           placeholder="Repeat password"
+                                           class="form-control"
+                                           id="passwordRepeat"
+                                           name="passwordRepeat"
+                                           formControlName="repeatPassword">  
+                                </label>
+                            </div>
+
+                            <p *ngIf="formField.get('passwords.repeatPassword').errors && formField.get('passwords.repeatPassword').touched" class="validationError">Password isn't valid!</p>
+                            <p *ngIf="formField.get('passwords.repeatPassword')?.errors?.minlength && formField.get('passwords.repeatPassword').touched" class="validationError">Min length should be 4!</p>
+                            <p *ngIf="formField.get('passwords')?.errors?.doesMatchPassword && formField.get('passwords').touched" class="validationError">Passwords don't match!</p> 
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-xs-6">
-                    <div class="form-group">
-                        <label for="passwordRepeat">
-                            Repeat Password
-                            <input type="passwordRepeat"
-                                   placeholder="Repeat password"
-                                   class="form-control"
-                                   id="passwordRepeat"
-                                   name="passwordRepeat"
-                                   formControlName="repeatPassword">  
-                        </label>
-                    </div>
-                </div>
-
+       
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="login">
@@ -82,7 +94,8 @@
                     </div>
                     
                     <p *ngIf="!formField.get('login').valid && formField.get('login').touched" class="validationError">Login isn't valid!</p>
-                    <p *ngIf="formField.get('login').errors && formField.get('login').touched" class="validationError">Minimal length should be at least 5!</p>
+                    <p *ngIf="formField.get('login').errors?.minlength && formField.get('login').touched" class="validationError">Minimal length should be at least 5!</p>
+                    <p *ngIf="formField.get('login').errors?.loginIsForbidden && formField.get('login').touched" class="validationError">User with such login is already exist!</p>
                 </div>
     
                 <div class="col-md-6 col-xs-6">
@@ -97,6 +110,9 @@
                                    formControlName="phone">  
                         </label>
                     </div>
+
+                    <p *ngIf="formField.get('phone').errors && formField.get('phone').touched" class="validationError">Phone isn't valid!</p>
+                    <p *ngIf="formField.get('phone').errors?.minlength && formField.get('phone').touched" class="validationError">Min length should be 8!</p>
                 </div>
     
                 <div class="col-md-6 col-xs-6">
@@ -111,6 +127,10 @@
                                    formControlName="email">  
                         </label>
                     </div>
+
+                    <p *ngIf="formField.get('email').errors && formField.get('email').touched" class="validationError">Email isn't valid!</p>
+                    <p *ngIf="formField.get('email')?.errors?.minlength && formField.get('email').touched" class="validationError">Min length should be 4!</p>
+                    <p *ngIf="formField.get('email')?.errors?.emailIsForbidden && formField.get('email').touched" class="validationError">Email is already exist!</p> 
                 </div>
     
                 <div class="col-md-6 col-xs-6">
