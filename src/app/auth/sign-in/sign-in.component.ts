@@ -21,12 +21,19 @@ export class SignInComponent implements OnInit {
   }
 
   public onLogin(form: NgForm): void {
-    const login = form.value.login;
-    const password = form.value.password;
-
+    const { login, password } = {
+      login: form.value.login,
+      password: form.value.password
+    };
+    console.log(login, password);
     this.authStatus = this.authService.signIn(login, password);
-    if (this.authService.isAuthenticated) {
-      localStorage.setItem('userCredentials', JSON.stringify({login, password}));
-    }
+
+    this.authService.authenticatedSubject.subscribe(
+      (isAuthenticated: boolean) => {
+        if (this.authService.isAuthenticated) {
+          localStorage.setItem('userCredentials', JSON.stringify({login, password}));
+        }
+      }
+    );
   }
 }

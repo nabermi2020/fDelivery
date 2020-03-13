@@ -11,7 +11,7 @@ import { environment } from './../../../environments/environment';
 export class AuthService {
   public isAuthenticated = false;
   public authenticatedSubject = new Subject<boolean>();
-  public currentUser: User;
+  public currentUser: UserDetails;
   private apiUrl = environment.apiUrl;
 
   public users: Array<User> = [
@@ -23,7 +23,7 @@ export class AuthService {
   constructor(private router: Router,
               private http: HttpClient) {}
 
-  public signIn(login: string, password: string): boolean {
+  public signInn(login: string, password: string): boolean {
     login = 'john_smith777';
     password = 'john777';
 
@@ -31,14 +31,39 @@ export class AuthService {
       (user: User) => {
         if (user.user.login === login &&
             user.user.password === password) {
-          this.currentUser = user;
-          this.isAuthenticated = true;
-          this.authenticatedSubject.next(this.isAuthenticated);
+          // this.currentUser = user;
+          // this.isAuthenticated = true;
+          // this.authenticatedSubject.next(this.isAuthenticated);
           return true;
         }
       });
 
     return false;
+  }
+
+  public signIn(login: string, password: string): any {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    let authStatus = false;
+
+    this.http.get(`${this.apiUrl}/users?login=${login}&&password=${password}`, { headers })
+      .subscribe(
+        (res: Array<any>) => {
+          if (res && res.length > 0) {
+            this.currentUser = res[0];
+            console.log(res);
+            this.isAuthenticated = true;
+            this.authenticatedSubject.next(this.isAuthenticated);
+            authStatus = true;
+            return true;
+          }
+
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+
+    return authStatus;
   }
 
   public signUp(user: User): void {
@@ -51,7 +76,7 @@ export class AuthService {
         (error: Response) => {
           console.log(error);
         }
-      )
+      );
   }
 
   public logOut(): void {
@@ -64,7 +89,7 @@ export class AuthService {
     return this.isAuthenticated;
   }
 
-  public getCurrentUserInfo(): User {
+  public getCurrentUserInfo(): UserDetails {
     return this.currentUser;
   }
 
@@ -90,7 +115,7 @@ export class AuthService {
     return this.http.get<Array<UserDetails>>(`${this.apiUrl}/users?login=${login}`, { headers });
   }
 
-  public checkEmail(email: string): Observable<Array<UserDetails>>{
+  public checkEmail(email: string): Observable<Array<UserDetails>> {
     const headers = new HttpHeaders({'Content-type': 'application/json'});
     return this.http.get<Array<UserDetails>>(`${this.apiUrl}/users?email=${email}`, { headers });
   }

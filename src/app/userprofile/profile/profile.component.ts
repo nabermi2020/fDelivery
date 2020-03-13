@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
               private authService: AuthService,
               private editModal: EditModalService) { }
-  
+
   ngOnInit() {
     this.fetchUserInfo();
     this.mapUserData();
