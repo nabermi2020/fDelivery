@@ -5,6 +5,7 @@ import { ProductDashboardComponent } from './product-dashboard/product-dashboard
 import { ProfileComponent } from '../userprofile/profile/profile.component';
 import { ProfileDetailComponent } from '../userprofile/profile-detail/profile-detail.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
+import {CartComponent} from './cart/cart.component';
 
 const dashboardRoutes: Routes = [
     { path: '', component: ProductDashboardComponent, canActivate: [AuthGuardService], children: [
@@ -14,7 +15,9 @@ const dashboardRoutes: Routes = [
 
         { path: 'products', component: ProductGridComponent, children: [
             { path: ':category', component: ProductGridComponent }
-        ] }
+        ]},
+
+        { path: 'cart', component: CartComponent }
     ]},
 
 ];

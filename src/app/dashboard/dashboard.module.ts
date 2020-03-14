@@ -8,6 +8,7 @@ import { ProfileModule } from '../userprofile/profile.module';
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { FormsModule } from '@angular/forms';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
         SidebarComponent,
         HeaderComponent,
         ProductGridComponent,
-        ProductItemComponent
+        ProductItemComponent,
+        CartComponent
     ],
     imports: [
         CommonModule,

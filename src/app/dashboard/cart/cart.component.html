@@ -1,0 +1,7 @@
+<div *ngFor="let product of cart">
+  {{ product.product.productTitle }}
+  {{ product.product.productPrice }}
+  {{ product.product.Description }}
+  <img [src]="product.product.imgPath" style="width: 150px">
+  <hr>
+</div>
