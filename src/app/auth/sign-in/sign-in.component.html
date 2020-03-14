@@ -17,7 +17,7 @@
                     login
                     ngModel
                     #login="ngModel">
-            
+
         </div>
         <p *ngIf="!login.valid && login.touched" class="validationError">Login is not valid!</p>
 
@@ -34,8 +34,8 @@
                     password
                     #password="ngModel"
                     ngModel>
-            
-        </div>   
+
+        </div>
         <p *ngIf="!password.valid && password.touched" class="validationError">Password is not valid!</p>
         <p *ngIf="!authStatus && password.touched" class="validationError">Your login and password are incorect!</p>
     </div>
@@ -45,7 +45,7 @@
                 id="signInBtn"
                 type="submit"
                 [disabled]="!form.valid">
-            Log In  
+            Log In
         </button>
     </div>
     </form>

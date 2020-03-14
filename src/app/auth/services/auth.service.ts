@@ -56,7 +56,6 @@ export class AuthService {
             authStatus = true;
             return true;
           }
-
         },
         (err) => {
           console.log(err);

@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.fetchUserInfo();
     this.mapUserData();
-    this.fetchUserId();
+    //this.fetchUserId();
     this.subscribeToEditMode();
   }
 
