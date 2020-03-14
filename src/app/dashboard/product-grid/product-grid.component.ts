@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ProductService } from "src/app/shared/services/product.service";
 import { Observable, Subscription } from "rxjs";
-import { Product } from "src/app/shared/models/products.model";
+import {Product, ProductDetails} from 'src/app/shared/models/products.model';
 import { ActivatedRoute, Params } from "@angular/router";
 
 @Component({
@@ -10,7 +10,7 @@ import { ActivatedRoute, Params } from "@angular/router";
   styleUrls: ["./product-grid.component.scss"]
 })
 export class ProductGridComponent implements OnInit {
-  public products$: Observable<Array<Product>>;
+  public products$: Observable<Array<ProductDetails>>;
   public activeCategory: string = "pizza";
 
   constructor(

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Product } from '../models/products.model';
+import {Product, ProductDetails} from '../models/products.model';
 import { environment } from './../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, Observer } from 'rxjs';
@@ -29,13 +29,13 @@ export class ProductService {
     this.http.post<Array<Product>>(`${this.apiUrl}`, this.products, { headers });
   }
 
-  public getProducts(): Observable<Array<Product>> {
+  public getProducts(): Observable<Array<ProductDetails>> {
     const headers = new HttpHeaders({'Content-type': 'application/json'});
-    return this.http.get<Array<Product>>(`${this.apiUrl}/pizza`, { headers });
+    return this.http.get<Array<ProductDetails>>(`${this.apiUrl}/pizza`, { headers });
   }
 
-  public getProductsByCategory(category: string): Observable<Array<Product>> {
+  public getProductsByCategory(category: string): Observable<Array<ProductDetails>> {
     const headers = new HttpHeaders({'Content-type': 'application/json'});
-    return this.http.get<Array<Product>>(`${this.apiUrl}/${category}`, { headers });
+    return this.http.get<Array<ProductDetails>>(`${this.apiUrl}/${category}`, { headers });
   }
 }
