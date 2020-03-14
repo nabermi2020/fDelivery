@@ -20,4 +20,14 @@ export class ProductCartService {
     return this.products;
   }
 
+  public deleteProductById(id: number): void {
+    this.products.forEach((item, index) => {
+      if (item.product.productId === id) {
+        this.products.splice(index, 1);
+      }
+    });
+
+    this.onProductAdded.next(this.products);
+  }
+
 }

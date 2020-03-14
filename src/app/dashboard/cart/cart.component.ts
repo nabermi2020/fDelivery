@@ -16,4 +16,9 @@ export class CartComponent implements OnInit {
     this.cart = this.productCart.getProducts();
   }
 
+  public deleteCurrentProduct(product: Product): void {
+    const productId = product.product.productId;
+    this.productCart.deleteProductById(productId);
+  }
+
 }

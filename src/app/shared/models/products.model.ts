@@ -9,7 +9,7 @@ export interface ProductDetails {
 }
 
 export class Product {
-    constructor(private product: ProductDetails) {
+    constructor(public product: ProductDetails) {
         this.product = product;
 
         if (!product.productId) {
