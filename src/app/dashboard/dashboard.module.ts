@@ -7,13 +7,15 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { ProfileModule } from '../userprofile/profile.module';
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { FormsModule } from '@angular/forms';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 @NgModule({
     declarations: [
-        ProductDashboardComponent, 
+        ProductDashboardComponent,
         SidebarComponent,
         HeaderComponent,
-        ProductGridComponent
+        ProductGridComponent,
+        ProductItemComponent
     ],
     imports: [
         CommonModule,
