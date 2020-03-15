@@ -10,10 +10,15 @@ import {Product, ProductDetails} from '../models/products.model';
   styleUrls: ['./notify-bar.component.scss']
 })
 export class NotifyBarComponent implements OnInit {
-  addedProduct: ProductDetails;
+  public addedProduct: ProductDetails;
+
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: ProductDetails) { }
 
   ngOnInit(): void {
+    this.bindNotificationData();
+  }
+
+  private bindNotificationData(): void {
     this.addedProduct = this.data;
   }
 

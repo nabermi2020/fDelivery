@@ -1,5 +1,5 @@
 <div id="products-grid">
-  <div class="row results"
+  <div class="row"
        infiniteScroll
        [infiniteScrollDistance]="0"
        [infiniteScrollThrottle]="500"
@@ -10,12 +10,12 @@
       <app-product-item [productData]="product"></app-product-item>
     </div>
   </div>
-  <div *ngIf="loadingProducts" style="width: 100%; display: flex; justify-content: center; padding-bottom: 15px">
-    <mat-progress-spinner
-      class="example-margin"
-      color="warn"
-      mode="indeterminate"
-      value="40">
+
+  <div *ngIf="loadingProducts" class="onLoading">
+    <mat-progress-spinner class="example-margin"
+                          color="warn"
+                          mode="indeterminate"
+                          value="40">
     </mat-progress-spinner>
   </div>
 </div>

@@ -10,12 +10,11 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./product-grid.component.scss']
 })
 export class ProductGridComponent implements OnInit {
-  public products$: Observable<Array<ProductDetails>>;
   public productList: Array<ProductDetails> = [];
   public activeCategory = 'pizza';
   public loadingProducts = false;
-  counter = 1;
-  currentList;
+  private counter = 1;
+  public currentList;
 
   constructor(
     private productService: ProductService,
@@ -28,7 +27,6 @@ export class ProductGridComponent implements OnInit {
   }
 
   private fetchProducts(): void {
-    // this.products$ =
     this.productService.getProducts().
       subscribe(
       (products: Array<ProductDetails>) => {
@@ -41,8 +39,18 @@ export class ProductGridComponent implements OnInit {
   private fetchProductsByActiveCategory(): void {
     this.route.firstChild.params.subscribe((params: Params) => {
       this.activeCategory = params.category;
-      this.products$ = this.productService.getProductsByCategory(this.activeCategory);
+      this.bindProductsByCategory();
     });
+  }
+
+  private bindProductsByCategory(): void {
+    this.productService.getProductsByCategory(this.activeCategory).
+      subscribe(
+      (products: Array<ProductDetails>) => {
+        this.productList = products;
+        this.counter = 1;
+        this.getElementsOnScroll();
+      });
   }
 
   public onScroll(): void {

@@ -1,9 +1,13 @@
 #products-grid {
   padding-bottom: 20px;
   padding-left: 15px;
-  border: 1px solid red;
+
+  .onLoading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
 }
 
-.results {
-  height: 100%;
-}
+

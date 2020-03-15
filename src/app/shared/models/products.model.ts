@@ -6,11 +6,13 @@ export interface ProductDetails {
     imgPath: string;
     productPrice: string;
     productId?: number;
+    productQuantity?: number;
 }
 
 export class Product {
     constructor(public product: ProductDetails) {
         this.product = product;
+        this.product.productQuantity = 1;
 
         if (!product.productId) {
             this.product.productId = this.randomId(1000, 1);

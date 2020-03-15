@@ -11,6 +11,7 @@ import {NotifyBarComponent} from '../../shared/notify-bar/notify-bar.component';
 })
 export class ProductItemComponent implements OnInit {
   @Input() productData: ProductDetails;
+  private notifyDuration = 2;
 
   constructor(private productCartService: ProductCartService,
               private snackBar: MatSnackBar) {}
@@ -21,7 +22,7 @@ export class ProductItemComponent implements OnInit {
     this.productCartService.addProduct(this.productData);
     setTimeout(() => {
       this.snackBar.openFromComponent(NotifyBarComponent, {
-        duration: 2.5 * 1000,
+        duration: this.notifyDuration * 1000,
         data: this.productData
       });
     }, 400);
