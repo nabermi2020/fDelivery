@@ -62,6 +62,60 @@
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza7.jpg",
       "productPrice": "199"
+    },
+    {
+      "id": 8,
+      "productTitle": "Emilia's Pizza",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/pizza1.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 9,
+      "productTitle": "Carbonara",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
+      "imgPath": "./../../assets/pizza2.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 10,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
+      "imgPath": "./../../assets/pizza3.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 11,
+      "productTitle": "Emilia's Pizza",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
+      "imgPath": "./../../assets/pizza1.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 12,
+      "productTitle": "Carbonara",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
+      "imgPath": "./../../assets/pizza2.jpg",
+      "productPrice": "199"
+    },
+    {
+      "id": 13,
+      "productTitle": "Four Cheeses Classic",
+      "productWeight": "550 grams",
+      "productSize": "30 sm",
+      "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
+      "imgPath": "./../../assets/pizza3.jpg",
+      "productPrice": "199"
     }
   ],
   "salads": [

@@ -18,7 +18,11 @@ export class ProductDashboardComponent implements OnInit {
       (res: boolean) => {
         this.isModalEnabled = res;
       }
-    )
+    );
   }
 
+
+  onScroll() {
+    console.log('hi');
+  }
 }

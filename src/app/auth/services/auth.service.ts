@@ -50,7 +50,7 @@ export class AuthService {
         (res: Array<any>) => {
           if (res && res.length > 0) {
             this.currentUser = res[0];
-            console.log(res);
+            //console.log(res);
             this.isAuthenticated = true;
             this.authenticatedSubject.next(this.isAuthenticated);
             authStatus = true;

@@ -21,19 +21,18 @@ export class AuthenticationComponent implements OnInit {
   public checkAuthenticationStatus(): void {
     this.authenticationSubscription = this.authService.authenticatedSubject.subscribe(
       (isUserAuthentucated: boolean) => {
-        console.log(isUserAuthentucated);
         this.router.navigate([isUserAuthentucated ? 'dashboard/products/pizza' : '/']);
       }
     );
 
-   // this.isAuthenticated();
+    this.isAuthenticated();
   }
 
   private isAuthenticated(): void {
     const userCredentials = localStorage.getItem('userCredentials');
     if (userCredentials) {
       const credentials = JSON.parse(userCredentials);
-      this.authService.signInn(credentials.login, credentials.password);
+      this.authService.signIn(credentials.login, credentials.password);
     }
   }
 }

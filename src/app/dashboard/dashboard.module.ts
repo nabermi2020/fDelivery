@@ -9,6 +9,10 @@ import { ProductGridComponent } from './product-grid/product-grid.component';
 import { FormsModule } from '@angular/forms';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { CartComponent } from './cart/cart.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {NotifyBarComponent} from '../shared/notify-bar/notify-bar.component';
 
 @NgModule({
     declarations: [
@@ -17,13 +21,17 @@ import { CartComponent } from './cart/cart.component';
         HeaderComponent,
         ProductGridComponent,
         ProductItemComponent,
-        CartComponent
+        CartComponent,
+        NotifyBarComponent
     ],
     imports: [
         CommonModule,
         DashboardRoutingModule,
         ProfileModule,
-        FormsModule
+        FormsModule,
+        InfiniteScrollModule,
+        MatProgressSpinnerModule,
+        MatSnackBarModule
     ],
     exports: [
     ]
