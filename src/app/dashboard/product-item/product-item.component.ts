@@ -12,6 +12,8 @@ import {NotifyBarComponent} from '../../shared/notify-bar/notify-bar.component';
 export class ProductItemComponent implements OnInit {
   @Input() productData: ProductDetails;
   private notifyDuration = 2;
+  public onProductAdded: boolean = false;
+
 
   constructor(private productCartService: ProductCartService,
               private snackBar: MatSnackBar) {}
@@ -20,12 +22,23 @@ export class ProductItemComponent implements OnInit {
 
   public addProductToCart(): void {
     this.productCartService.addProduct(this.productData);
+    this.changeProductStatus();
+    this.showNotification();
+  }
+
+  private showNotification(): void {
     setTimeout(() => {
       this.snackBar.openFromComponent(NotifyBarComponent, {
         duration: this.notifyDuration * 1000,
         data: this.productData
       });
     }, 400);
+  }
 
+  private changeProductStatus(): void {
+    this.onProductAdded = true;
+    setTimeout(() => {
+      this.onProductAdded = false;
+    }, 1000);
   }
 }

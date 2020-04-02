@@ -15,16 +15,16 @@
     <div class="ingredients">{{ productData.productDescription }}</div>
   </div>
 
-  <div class="addToCartWrapper">
+  <div class="addToCartWrapper" [ngStyle]="{'background-color': onProductAdded ? 'green' : 'red'}">
     <div class="productQuantity">
-      - 1 +
+      <!-- 1 +-->
     </div>
 
     <div class="addToCart" (click)="addProductToCart()">
-      Add To Cart
+      {{ onProductAdded ? 'Product is added!': 'Add To Cart'}}
     </div>
 
-    <div class="productPrice">
+    <div class="productPrice" *ngIf="!onProductAdded">
       {{ productData.productPrice }} $
     </div>
   </div>
