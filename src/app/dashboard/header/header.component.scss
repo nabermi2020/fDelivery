@@ -1,14 +1,19 @@
 #headerSection {
     height: 50px;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background: white(214, 205, 183);
     box-shadow: 0 0 10px black;
+
+
 
     #activeCategory {
         left: 2%;
         line-height: 50px;
-        position: absolute;
+        //position: absolute;
         text-align: center;
         width: 150px;
         color: lightgray;
@@ -18,8 +23,11 @@
     #controlsWrapper {
         width: 40%;
         height: 100%;
-        position: absolute;
+        //position: absolute;
         line-height: 50px;
+        display: flex;
+
+        justify-content: space-evenly;
         right: 0;
 
         a {
@@ -35,26 +43,29 @@
             height: 100%;
             text-align: center;
             line-height: 50px;
-            width: 12.4%;
+            width: 40%;
             display: inline-block;
             position: relative;
 
-            #cartCounter{
-              position: absolute;
-              background: red;
-              color: white;
-              border-radius: 50% 50%;
-              width: 20px;
-              height: 20px;
-              font-size: 10px;
-              line-height: 20px;
-              right: 0%;
-              display: inline-block;
-            }
+
 
             #price {
               display: inline-block;
               font-weight: 600;
+              position: relative;
+
+              #cartCounter{
+                position: absolute;
+                background: red;
+                color: white;
+                border-radius: 50% 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                line-height: 20px;
+                right: -10%;
+                display: inline-block;
+              }
             }
 
             &:hover {
