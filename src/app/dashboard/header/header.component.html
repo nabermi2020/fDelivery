@@ -8,8 +8,12 @@
             Hello <a [routerLink]="['profile', userId]"><b>{{ activeUser.login }}</b></a> / <a (click)="logOut()">Log Out</a>
         </div>
         <div id="cart" (click)="openCart()">
-          <div id="cartCounter">{{ productQuantity || 0 }}</div>
+        <span id="price">
+          {{ totalPrice || 0 }} $
+          <div id="cartCounter" *ngIf="productQuantity">{{ productQuantity || 0 }}</div>
           <img src="./../../../assets/cart.png">
+        </span>
+
         </div>
     </div>
 </header>

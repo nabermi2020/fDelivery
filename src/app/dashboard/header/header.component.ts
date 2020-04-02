@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   public activeUser: UserDetails;
   public userId: number;
   public productQuantity = 0;
+  public totalPrice: number = 0;
 
   constructor(private authService: AuthService,
               private router: Router,

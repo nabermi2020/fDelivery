@@ -12,6 +12,7 @@
         text-align: center;
         width: 150px;
         color: lightgray;
+        margin-right: 15px;
     }
 
     #controlsWrapper {
@@ -34,7 +35,7 @@
             height: 100%;
             text-align: center;
             line-height: 50px;
-            width: 20%;
+            width: 12.4%;
             display: inline-block;
             position: relative;
 
@@ -47,8 +48,13 @@
               height: 20px;
               font-size: 10px;
               line-height: 20px;
-              right: 20%;
+              right: 0%;
+              display: inline-block;
+            }
 
+            #price {
+              display: inline-block;
+              font-weight: 600;
             }
 
             &:hover {
