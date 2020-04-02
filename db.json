@@ -7,7 +7,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza1.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza2.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza3.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza4.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza5.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza6.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza7.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza1.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza2.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza3.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/pizza1.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza2.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 13,
@@ -115,7 +115,7 @@
       "productSize": "30 sm",
       "productDescription": "Ham, mozzarella, tomatoes, corn, garlic sauce",
       "imgPath": "./../../assets/pizza3.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     }
   ],
   "salads": [
@@ -126,7 +126,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/salad1.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 9,
@@ -135,7 +135,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/salad2.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 10,
@@ -144,7 +144,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/salad3.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 11,
@@ -153,7 +153,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/salad4.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     }
   ],
   "drinks": [
@@ -164,7 +164,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/drink1.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 13,
@@ -173,7 +173,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/drink2.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 14,
@@ -182,7 +182,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/drink3.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     },
     {
       "id": 15,
@@ -191,7 +191,7 @@
       "productSize": "30 sm",
       "productDescription": "Mozzarella, parmesan cheese, cheddar cheese, Dor blue cheese, cream sauce, white Brie cheese",
       "imgPath": "./../../assets/drink4.jpg",
-      "productPrice": "199"
+      "productPrice": 199
     }
   ],
   "users": [

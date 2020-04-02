@@ -8,6 +8,8 @@ import { Subject } from 'rxjs';
 export class ProductCartService {
   private products: Array<Product> = [];
   public onProductAdded = new Subject<any>();
+  public onPriceChanged = new Subject<number>();
+  private totalPrice: number;
 
   constructor() {}
 
@@ -20,6 +22,7 @@ export class ProductCartService {
       this.changeProductsQuantity(productId);
     }
 
+    this.calculateTotalPrice();
     this.onProductAdded.next(this.products);
   }
 
@@ -66,6 +69,21 @@ export class ProductCartService {
     });
 
     this.onProductAdded.next(this.products);
+  }
+
+  public calculateTotalPrice(): void {
+    let price = 0;
+    console.log(this.products);
+    this.products.forEach( (item: Product) => {
+       price += item.product.productPrice * item.product.productQuantity;
+    });
+
+    this.totalPrice = price;
+  }
+
+  public getTotalPrice(): number {
+    this.calculateTotalPrice();
+    return this.totalPrice;
   }
 
 }
