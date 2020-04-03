@@ -31,10 +31,10 @@ export class ProfileComponent implements OnInit, OnDestroy {
               private editModal: EditModalService) { }
 
   ngOnInit() {
-    //this.fetchUserInfo();
-   // this.mapUserData();
-    //this.fetchUserId();
-    //this.subscribeToEditMode();
+    this.fetchUserInfo();
+    this.mapUserData();
+    this.fetchUserId();
+    this.subscribeToEditMode();
   }
 
   private subscribeToEditMode(): void {
@@ -48,6 +48,8 @@ export class ProfileComponent implements OnInit, OnDestroy {
   private fetchUserInfo(): void {
     this.id = this.route.snapshot.children[0].params.id;
     this.user = this.authService.getUserById(this.id);
+    console.log(this.id);
+    console.log(this.user);
   }
 
   private mapUserData(): void {

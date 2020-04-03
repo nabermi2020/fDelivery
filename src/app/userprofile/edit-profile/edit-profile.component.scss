@@ -1,10 +1,61 @@
 #editModal {
-    position: absolute;
-    background:white;
-    z-index: 20;
-    height: 350px;
-    width: 60%;
-    top: 15%;
-    border: 1px solid red;
-    left: 25%;
+  position: absolute;
+  opacity: 1;
+  background:white;
+  z-index: 20;
+  height: 350px;
+  width: 50%;
+  top: 50%;
+  left: 42%;
+  transform: translate(-60%, -30%);
+  animation: moveToTop .25s ease-out;
+  transition: all;
+
+  #editModalHeader {
+    height: 35px;
+    width: 100%;
+    background: rgb(127, 80, 216);
+    color: white;
+    text-align: center;
+
+    #editModalTitle {
+      display: inline-block;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      height: 35px;
+    }
+
+    .controls {
+      text-align: center;
+    }
+
+  }
+
+}
+
+form {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translate(-60%, -10%);
+
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translate(-60%, -20%);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-60%, -30%);
+  }
 }

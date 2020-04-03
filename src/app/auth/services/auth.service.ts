@@ -17,7 +17,17 @@ export class AuthService {
   public users: Array<User> = [
     new User({firstName: 'John', lastName: 'Smith', login: 'john_smith777', password: 'john777', phone: '+380501654784', email: 'john777@gmail.com', address: 'NY, Green Valley 15/64'}),
     new User({firstName: 'Michael', lastName: 'Naberezhnyi', login: 'michael777', password: 'test123', phone: '+380501865210', email: 'mnabe777@gmail.com', address: 'LA, Red Valley 7/32'}),
-    new User({firstName: 'John', lastName: 'Doe', login: 'johnl777', password: 'demo1234', phone: '+380502565210', email: 'john_doe@gmail.com', address: 'Las Vegas, Yellow Road 7/32'})
+    new User({firstName: 'John', lastName: 'Doe', login: 'johnl777', password: 'demo1234', phone: '+380502565210', email: 'john_doe@gmail.com', address: 'Las Vegas, Yellow Road 7/32'}),
+    new User( {
+      firstName: 'test',
+      lastName: 'user',
+      login: 'doe',
+      password: 'test123',
+      phone: '0501865210',
+      email: 'as@o.p',
+      address: 'sdsd',
+      userId: 993
+    })
   ];
 
   constructor(private router: Router,
