@@ -50,6 +50,10 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     this.editProfile.toggleEditMode();
   }
 
+  public saveChanges(): void {
+    console.log('Sace changes!');
+  }
+
   ngOnDestroy() {
     this.userIdSubscription.unsubscribe();
   }
